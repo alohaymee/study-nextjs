@@ -7,6 +7,17 @@ export const metadata: Metadata = {
   description: 'I like Snoopy!',
 };
 
+const themes = {
+  dark: {
+    background: 'black',
+    color: 'white',
+  },
+  light: {
+    background: 'white',
+    color: 'block',
+  },
+};
+
 export default function StudyLayout({
   children,
 }: {
@@ -14,8 +25,10 @@ export default function StudyLayout({
 }) {
   return (
     <>
-      <Navbar></Navbar>
-      <div>{children}</div>
+      <div style={{ display: 'flex', ...themes['light'] }}>
+        <Navbar></Navbar>
+        <div style={{ flex: 1 }}>{children}</div>
+      </div>
     </>
   );
 }

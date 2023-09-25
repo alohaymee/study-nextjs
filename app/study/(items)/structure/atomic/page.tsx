@@ -1,39 +1,54 @@
+import Link from 'next/link';
+import Image from 'next/image';
+
 export default function Page() {
   return (
     <>
-      <h3>프로젝트 디렉토리 구성</h3>
+      <div
+        style={{
+          position: 'relative',
+          width: '600px',
+          height: '400px',
+        }}
+      >
+        <Image
+          src={'https://yozm.wishket.com/media/news/1531/image015.png'}
+          alt={'Atomic'}
+          sizes={'100vw'}
+          fill={true}
+          style={{ objectFit: 'contain' }}
+        ></Image>
+      </div>
+
       <ul>
-        <li>/components</li>
-        <li>/utilities</li>
-        <li>/public(default)</li>
-        <li>/styles</li>
-        <li>/lib</li>
+        <li>Atoms: 더 이상 쪼갤 수 없는 디자인의 최소 단위</li>
+        <li>Molecules: Atoms를 모아 만듦. 최소 한가지 기능을 수행</li>
+        <li>
+          Organisms: Molecules + Atoms 조합으로 만들며 사용자에게함 의미와
+          역할이 존재는 단위
+        </li>
+        <li>
+          Template: Organisms 조합. 데이터 연결 전 상태의 최종 레이아웃 형태
+        </li>
+        <li>
+          Page: Template에 데이터가 결합되어 사용자에게 전달되는 최종 디자인
+          형태
+        </li>
       </ul>
 
-      <h4>/components</h4>
-      <p>
-        아토믹 디자인 패턴에 의해 atoms, molecules, organisms, templates 로 나눌
-        수 있음. 원자단위, 분자단위를 나누는 구분 기준은 어떻게 되는걸까?
-        organisms 와 template 의 구분 기준은?
-      </p>
+      <Image
+        src={'https://yozm.wishket.com/media/news/1531/image017.gif'}
+        alt={'Atomic'}
+        sizes={'100vw'}
+        style={{ width: '100%', height: 'auto' }}
+        width={500}
+        height={300}
+      ></Image>
 
-      <h4>/utilities</h4>
-      <p>유틸성 함수 모음용.</p>
-
-      <h4>/public</h4>
-      <p>
-        create-next-app 으로 프로젝트 생성 시 기본으로 생성됨. 정적 자원 저장
-        위치. assets 등.
-      </p>
-
-      <h4>/styles</h4>
-      <p>
-        공통 스타일 파일 모음. CSS-IN-JS 프레임워크를 사용하더라도 공통으로
-        사용하기 위한 스타일 파일이 있을 수 있음.
-      </p>
-
-      <h4>/lib</h4>
-      <p>third-party 라이브러리 모음용.</p>
+      <h3>아토믹 디자인 적용 전에 읽어보기</h3>
+      <a href={'https://yozm.wishket.com/magazine/detail/1531/'}>
+        Atomic Design Patten의 Best Practice 여정기
+      </a>
     </>
   );
 }

@@ -1,44 +1,41 @@
-import { Metadata } from "next";
-import Image from "next/image";
+import axios, { AxiosResponse } from 'axios';
+import Link from 'next/link';
 
-export const metadata: Metadata = {
-  title: "Hello, Peanut!",
-};
-export default function Page() {
+async function getCarList() {
+  let carList = await axios
+    .post('https://nm-api.io/api/internal/v1/car/list', {
+      sdate: '2023-11-01T10:00',
+      edate: '2023-11-03T10:00',
+      zone: 'JEJU',
+      agencyCode: ['NM_JEJUEV'],
+    })
+    .then((res) => {
+      return res.data;
+    })
+    .catch((err) => {
+      return false;
+    });
+
+  return carList;
+}
+
+export default async function Page() {
+  const carList = await getCarList();
   return (
     <>
-      <div>
-        <h4>fill={"true"}</h4>
-        <div style={{ width: 500, height: 500, position: "relative" }}>
-          <Image
-            src={
-              "https://images.unsplash.com/photo-1649179731119-b5491fc36f8e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3570&q=80"
-            }
-            alt={"Hello"}
-            fill={true}
-          ></Image>
-        </div>
-        <p>
-          parent element 를 채운다. width, height 값이 불확실 할 때 유용한 방법.
-          상위 element 의 position 스타일 속성이 relative 이거나 fixed 여야 함.
-          기본값으로 img element 는 position absolute.
-        </p>
-      </div>
-      <div>
-        <h4>fill={"false"}</h4>
-        <div style={{ width: 500, height: 500, position: "relative" }}>
-          <Image
-            src={
-              "https://images.unsplash.com/photo-1649179731119-b5491fc36f8e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3570&q=80"
-            }
-            alt={"Hello"}
-            fill={false}
-            width={800}
-            height={500}
-          ></Image>
-        </div>
-        <p>fill=false 인 경우 width, height 값을 필수로 명시해주어야 함</p>
-      </div>
+      <h3>Axios를 이용해 Zzimcar ERP API 에서 데이터 불러오기</h3>
+      <ul>
+        {carList.map((item: any) => (
+          <li key={item.modelCode} id={item.modelCode}>
+            {item.agency.agencyCode}: {item.modelCode} / {item.erpName}
+            <Link
+              href={`/study/axios/${item.agency.agencyCode}/${item.erpCode}`}
+            >
+              .. 상세보기
+            </Link>
+          </li>
+        ))}
+      </ul>
     </>
   );
 }

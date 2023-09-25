@@ -37,7 +37,7 @@ export default function Page() {
             height={500}
           ></Image>
         </div>
-        <p>fill=false 인 경우 width, height 값을 필수로 명시해주어야 함</p>함{" "}
+        <p>fill=false 인 경우 width, height 값을 필수로 명시해주어야 함</p>
       </div>
     </>
   );

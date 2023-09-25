@@ -27,7 +27,10 @@ export default async function Page({ params }) {
         <Image
           src={carDetail.car.imgUrlDetail[0]}
           alt={carDetail.car.erpName}
-          fill
+          sizes={'100vw'}
+          style={{ width: '100%', height: 'auto' }}
+          width={500}
+          height={300}
         ></Image>
       </p>
     </>
