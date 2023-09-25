@@ -1,18 +1,16 @@
-import "./globals.css";
+import React from 'react';
+import '../globals.css';
 
-export default function DashboardLayout({
+export default function UnsecuredLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
     <>
-      <header></header>
+      <header>Unsecured... layout</header>
       <div className="main-container">
-        <div className="nav-container">
-          <nav></nav>
-          <div className="main">{children}</div>
-        </div>
+        <div className="main">{children}</div>
       </div>
     </>
   );
