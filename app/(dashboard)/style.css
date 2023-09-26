@@ -1,27 +1,31 @@
 .wrapper-box {
-    background-color: red;
+    background-color: #F8F9FA;
 }
 
 .header-box {
-    background-color: orange;
     position: fixed;
     top: 0;
     z-index: 1028;
     justify-content: space-between;
     width: 100%;
     min-height: 70px;
+    box-shadow: 0 2px 4px 0 rgba(43,43,43,.1);
 }
 
 .header-left-box {
-    background-color: yellow;
+    background-color: #003ACC;
+    color: #FFFFFF;
+    padding: 0 20px;
     position: relative;
     width: 250px;
     float: left;
     height: 73px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header-right-box {
-    background-color: green;
     width: 100%;
     padding: 0 15px;
     margin: auto;
@@ -34,7 +38,6 @@
 }
 
 .body-box {
-    background-color: #F8F9FA;
     margin-top: 73px;
     position: relative;
     clear: both;
@@ -42,13 +45,83 @@
 }
 
 .nav-box {
-    background-color: #0A0A0A;
-    color: #FFFFFF;
+    background-color: #003ACC;
     width: 250px;
     float: left;
     top: 70px;
     position: fixed;
     height: 100%;
+}
+
+.nav-group-box {
+    margin-top: 20px;
+}
+
+.nav-group-box h5 {
+    color: #CBDAFF;
+    padding: 8px 12px;
+}
+
+.nav-group-box .nav-item-box {
+    color: #CBDAFF;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-sub-box {
+    padding: 12px 24px;
+    border-left: 3px solid #F9A825;
+    display: flex;
+    align-items: center;
+}
+
+.nav-sub-box:hover span {
+    color: #F9A825
+}
+
+.nav-sub-box:hover svg {
+    fill: #F9A825
+}
+
+.nav-sub-box span {
+    margin-left: 12px;
+    color: #CBDAFF;
+    font-size: 14px;
+}
+
+.nav-group-box .active {
+    background-color: #0048FF;
+    border-left: 3px solid #F9A825;
+}
+
+.nav-group-box .sub-active span {
+    color: #F9A825;
+    font-weight: 600;
+}
+
+.sub-active svg {
+    fill: #F9A825;
+}
+
+.nav-group-box .nav-item-box .nav-item-name-box {
+    display: flex;
+    align-items: center;
+}
+
+.nav-group-box .nav-item-box:hover .nav-item-name-box span {
+    color: #FFFFFF
+}
+
+.nav-group-box .nav-item-box:hover svg {
+    fill: #FFFFFF
+}
+
+.nav-group-box .nav-item-box .nav-item-name-box span {
+    margin-left: 12px;
+    color: #CBDAFF;
+    font-size: 14px;
 }
 
 .content-box {
