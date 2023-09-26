@@ -1,5 +1,6 @@
 import axios from 'axios';
 import Image from 'next/image';
+import Link from 'next/link';
 
 async function getCarDetail(agencyCode: string, erpCode: string) {
   return await axios
@@ -7,15 +8,19 @@ async function getCarDetail(agencyCode: string, erpCode: string) {
       agencyCode: agencyCode,
       erpCode: erpCode,
     })
-    .then((res) => {
+    .then(res => {
       return res.data;
     })
-    .catch((err) => {
+    .catch(err => {
       return false;
     });
 }
 
-export default async function Page({ params }) {
+export default async function Page({
+  params,
+}: {
+  params: {agencyCode: string; erpCode: string};
+}) {
   console.log(params);
   const carDetail = await getCarDetail(params.agencyCode, params.erpCode);
   console.log('result: ', carDetail);
@@ -27,9 +32,13 @@ export default async function Page({ params }) {
         <Image
           src={carDetail.car.imgUrlDetail[0]}
           alt={carDetail.car.erpName}
-          fill
+          sizes={'100vw'}
+          style={{width: '300px', height: 'auto'}}
+          width={0}
+          height={0}
         ></Image>
       </p>
+      <Link href={'/study/axios'}>뒤로가기</Link>
     </>
   );
 }

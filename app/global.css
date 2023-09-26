@@ -1,0 +1,64 @@
+@import "public/style/reset.css";
+
+html,body,h1,input,select {
+    font-family: Apple SD Gothic Neo,arial,sans-serif
+}
+
+body {
+    font-size: 14px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 800;
+    margin: 0;
+}
+
+h3 {
+    font-weight: 600;
+    margin: 8px 0;
+    font-size: 20px;
+    line-height: 2.0
+}
+
+h4 {
+    font-weight: 700;
+    margin: 4px 0;
+    font-size: 18px;
+    line-height: 1.8
+}
+
+h5 {
+    font-weight: 600;
+    margin: 4px 0;
+    font-size: 15px;
+    line-height: 1.6
+}
+
+body {
+    margin: 0;
+    color: #0A0A0A;
+}
+
+p {
+    margin-bottom: 8px;
+    line-height: 1.4
+}
+
+a {
+    color: #565758;
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(255,255,255,.1)
+}
+
+a:visited {
+    color: #2897DB
+}
+
+a:hover {
+    text-decoration: underline
+}

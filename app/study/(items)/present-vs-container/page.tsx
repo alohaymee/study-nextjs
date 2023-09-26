@@ -1,14 +1,18 @@
 export default function Page() {
   return (
     <>
-      <h3>프로젝트 디렉토리 구성</h3>
-      <ul>
-        <li>/components</li>
-        <li>/utilities</li>
-        <li>/public(default)</li>
-        <li>/styles</li>
-        <li>/lib</li>
-      </ul>
+      <h3>프레젠테이션 컴포넌트</h3>
+      <p>
+        props로 전달된 데이터를 기반으로 적절한 UI를 표시하기만 함. 내부에서
+        상태를 갖지 않고, API 호출 등 부가 작용도 하지 않음
+      </p>
+      <h3>컨테이터 컴포넌트</h3>
+      <p>비지니스 로직 담당. Hook 적용, 상태 관리, API 호출 등을 담당.</p>
+      <h3>Summary</h3>
+      <p>
+        컨테이너 컴포넌트가 부모로서 비지니스 로직을 담당하고, 프레젠테이션
+        컴포넌트는 부모로부터 전달된 props를 통해 표시만 담당함
+      </p>
     </>
   );
 }
