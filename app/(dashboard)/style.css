@@ -173,3 +173,32 @@
 .content-body {
     margin: 30px 35px 15px;
 }
+
+/* width <= 992 */
+@media screen and (max-width: 992px) {
+    h3 {
+        font-size: 16px !important;
+        font-weight: 500 !important;
+    }
+    .nav-box {
+        margin-left: -250px;
+    }
+
+    .header-left-box { width: 100%; justify-content: space-between }
+    .header-left-box .close { display: none; }
+    .header-left-box .open {display: block; }
+    .header-left-box .profile-btn {display: block; }
+
+    .profile-box {
+        display: none;
+    }
+
+    .content-box {margin-left: 0;}
+}
+
+/* width >= 993 */
+@media screen and (min-width: 993px) {
+    .header-left-box .close { display: block; }
+    .header-left-box .open {display: none; }
+    .header-left-box .profile-btn {display: none; }
+}

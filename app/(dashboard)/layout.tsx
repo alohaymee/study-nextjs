@@ -3,8 +3,10 @@ import './style.css';
 import React from 'react';
 import {
   CaretDoubleLeft,
+  CaretDoubleRight,
   CaretDown,
   CaretRight,
+  DotsThree,
   Gift,
   Graph,
   Info,
@@ -13,12 +15,14 @@ import {
   User,
 } from '@phosphor-icons/react/dist/ssr';
 import Image from 'next/image';
+import { Metadata } from 'next';
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className={'wrapper-box'}>
       <div className={'header-box'}>
         <div className={'header-left-box'}>
+          <CaretDoubleRight className={'open'} size={20} color={'#CBDAFF'} weight={'bold'}></CaretDoubleRight>
           <div className={'header-logo-box'}>
             <Image
               src={'https://zzimcar.s3.ap-northeast-2.amazonaws.com/common/image/logo/logo_white.svg'}
@@ -28,7 +32,8 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             ></Image>
             <SmileyAngry size={24} color={'#FFFFFF'} weight={'regular'}></SmileyAngry>
           </div>
-          <CaretDoubleLeft size={20} color={'#CBDAFF'} weight={'bold'}></CaretDoubleLeft>
+          <DotsThree className={'profile-btn'} size={20} color={'#CBDAFF'} weight={'bold'}></DotsThree>
+          <CaretDoubleLeft className={'close'} size={20} color={'#CBDAFF'} weight={'bold'}></CaretDoubleLeft>
         </div>
         <div className={'header-right-box'}>
           <div className={'profile-box'}>
@@ -103,3 +108,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     </div>
   );
 }
+
+export const metadata: Metadata = {
+  title: '찜카 관리자 v2.0',
+};
