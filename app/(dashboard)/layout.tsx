@@ -3,8 +3,10 @@ import './style.css';
 import React from 'react';
 import {
   CaretDoubleLeft,
+  CaretDoubleRight,
   CaretDown,
   CaretRight,
+  DotsThree,
   Gift,
   Graph,
   Info,
@@ -19,6 +21,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     <div className={'wrapper-box'}>
       <div className={'header-box'}>
         <div className={'header-left-box'}>
+          <CaretDoubleRight className={'open'} size={20} color={'#CBDAFF'} weight={'bold'}></CaretDoubleRight>
           <div className={'header-logo-box'}>
             <Image
               src={'https://zzimcar.s3.ap-northeast-2.amazonaws.com/common/image/logo/logo_white.svg'}
@@ -28,7 +31,8 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             ></Image>
             <SmileyAngry size={24} color={'#FFFFFF'} weight={'regular'}></SmileyAngry>
           </div>
-          <CaretDoubleLeft size={20} color={'#CBDAFF'} weight={'bold'}></CaretDoubleLeft>
+          <DotsThree className={'profile-btn'} size={20} color={'#CBDAFF'} weight={'bold'}></DotsThree>
+          <CaretDoubleLeft className={'close'} size={20} color={'#CBDAFF'} weight={'bold'}></CaretDoubleLeft>
         </div>
         <div className={'header-right-box'}>
           <div className={'profile-box'}>
