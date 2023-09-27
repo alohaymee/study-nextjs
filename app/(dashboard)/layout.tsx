@@ -15,6 +15,7 @@ import {
   User,
 } from '@phosphor-icons/react/dist/ssr';
 import Image from 'next/image';
+import { Metadata } from 'next';
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -107,3 +108,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     </div>
   );
 }
+
+export const metadata: Metadata = {
+  title: '찜카 관리자 v2.0',
+};
