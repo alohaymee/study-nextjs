@@ -5,5 +5,42 @@ $success: #1EB725;
 $info: #2897DB;
 $warning: #F9A825;
 $danger: #FF616D;
+$white: #FFFFFF;
+$black: #0A0A0A;
 
 @import '~bootstrap/scss/bootstrap';
+
+.btn-zzimcar {
+  color: $white;
+  background-image: linear-gradient(107deg, #2FE8AC 0%, #0048FF 100%);
+}
+
+.btn-zzimcar:hover {
+  color: $white;
+  background-image: linear-gradient(43deg, #2FE8AC 0%, #0048FF 100%);
+}
+
+.btn-zzimcar:active {
+  color: $white !important;
+  border: 1px solid #0048FF !important;
+  background-image: linear-gradient(43deg, #2FE8AC 0%, #0048FF 100%);
+}
+
+[data-bs-theme='zzimcar'] {
+  --bs-body-color: $white;
+  --bs-body-color-rgb: #{to-rgb($white)};
+  --bs-body-bg: $blue;
+  --bs-body-bg-rgb: #{to-rgb($blue)};
+  --bs-tertiary-bg: #{$blue-600};
+
+  .dropdown-menu {
+    --bs-dropdown-bg: #{mix($blue-500, $blue-600)};
+    --bs-dropdown-link-active-bg: #{$blue-700};
+    --bs-dropdown-color: $white;
+  }
+
+  .dropdown-item {
+    color: $white;
+  }
+
+}

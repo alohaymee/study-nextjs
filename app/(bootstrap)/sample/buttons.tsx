@@ -12,6 +12,7 @@ export default function ButtonSample() {
       <Button variant={'warning'}>Warning</Button>
       <Button variant={'light'}>Light</Button>
       <Button variant={'dark'}>Dark</Button>
+      <Button variant={'zzimcar'}>Custom-zzimcar</Button>
     </>
   );
 }
