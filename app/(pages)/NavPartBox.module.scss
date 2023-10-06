@@ -1,0 +1,10 @@
+@import '@/app/styles/variables';
+
+.wrapper {
+  background-color: $variants05;
+  height: 100vh;
+}
+// For Mobile viewport
+@media screen and (max-width: 992px) {
+
+}

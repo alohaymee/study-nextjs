@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import Navbar from '@/app/study/components/Nav';
+import Navbar from '@/app/test/components/Nav';
 
 export const metadata: Metadata = {
   title: 'Study Next.js',
@@ -18,11 +18,7 @@ const themes = {
   },
 };
 
-export default function StudyLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function StudyLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <div style={{ display: 'flex', ...themes['light'] }}>

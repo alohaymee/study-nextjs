@@ -1,11 +1,7 @@
 import React from 'react';
-import '../globals.css';
+import '../styles/globals.scss';
 
-export default function UnsecuredLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function UnsecuredLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <header>Unsecured... layout</header>

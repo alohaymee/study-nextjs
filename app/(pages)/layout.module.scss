@@ -1,0 +1,53 @@
+@import "@/app/styles/variables";
+
+.wrapper {}
+
+.headerBox {
+  display: flex;
+  width: 100%;
+  height: 73px;
+
+  .logoBox {
+    flex: 0 0 250px;
+    //background-color: $variants03;
+    transition: all 250ms ease-out 0s;
+  }
+
+  .profileBox {
+    width: 100%;
+    //background-color: $variants01;
+  }
+}
+
+.mainBox {
+  display: flex;
+  .navBox {
+    flex: 0 0 250px;
+    height: calc(100vh - 73px);
+    //background-color: $variants02;
+    transition: all 250ms ease-out 0s;
+  }
+  .contentBox {
+    padding: 20px;
+  }
+}
+
+// For Mobile viewport
+@media screen and (max-width: 992px) {
+  .headerBox {
+    .profileBox {
+      width: 0;
+    }
+    .logoBox {
+      flex: 1;
+      transition: all 250ms ease-out 0s;
+    }
+  }
+  .mainBox {
+    .navBox {
+      margin-left: -250px;
+      transition: all 250ms ease-out 0s;
+    }
+  }
+}
+

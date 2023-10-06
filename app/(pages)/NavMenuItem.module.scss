@@ -1,0 +1,22 @@
+@import '@/app/styles/variables';
+
+.wrapper {
+  span {
+    color: $white;
+  }
+}
+
+.opened {
+  composes: wrapper;
+  background-color: $variants03;
+  border-left: 3px solid $warning;
+}
+
+.closed {
+  composes: wrapper;
+}
+
+// For Mobile viewport
+@media screen and (max-width: 992px) {
+
+}

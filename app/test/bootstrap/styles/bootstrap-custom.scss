@@ -1,14 +1,5 @@
-$primary: #0A0A0A;
-$secondary: #003ACC;
-$blue: #0048FF;
-$success: #1EB725;
-$info: #2897DB;
-$warning: #F9A825;
-$danger: #FF616D;
-$white: #FFFFFF;
-$black: #0A0A0A;
-
-@import '~bootstrap/scss/bootstrap';
+@import 'variables';
+@import 'bootstrap';
 
 .btn-zzimcar {
   color: $white;

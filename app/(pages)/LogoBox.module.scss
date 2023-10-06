@@ -1,0 +1,36 @@
+@import '@/app/styles/variables';
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: $variants05;
+
+  .openBtn {
+    display: none;
+  }
+
+  .closeBtn {
+  }
+
+  .profileBtn {
+    display: none;
+  }
+
+  .logoImg {
+    margin-top: -5px;
+  }
+}
+
+// For Mobile viewport
+@media screen and (max-width: 992px) {
+  .wrapper {
+    .openBtn, .profileBtn {
+      display: block;
+    }
+    .closeBtn {
+      display: none;
+    }
+  }
+}
