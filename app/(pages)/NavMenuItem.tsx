@@ -8,8 +8,8 @@ export default function NavMenuItem({ name = '하위메뉴1', opened = false }) 
 
   return (
     <>
-      <Stack direction={'horizontal'} className={`${styles[styleType]} px-4 py-3`} gap={2}>
-        <CaretRight size={12} color={'#CBDAFF'} weight={'duotone'}></CaretRight>
+      <Stack direction={'horizontal'} className={`${styles[styleType]}`} gap={2}>
+        <CaretRight size={12} color={opened ? '#F9A825' : '#CBDAFF'} weight={'duotone'}></CaretRight>
         <span>{name}</span>
       </Stack>
     </>

@@ -1,19 +1,19 @@
 @import '@/app/styles/variables';
 
-.wrapper {
-  span {
-    color: $white;
-  }
+.common {
+  background-color: $variants04;
+  border-left: 3px solid $warning;
+  padding: 12px 24px;
 }
 
 .opened {
-  composes: wrapper;
-  background-color: $variants03;
-  border-left: 3px solid $warning;
+  composes: common;
+  color: $warning;
 }
 
 .closed {
-  composes: wrapper;
+  composes: common;
+  color: $variants02;
 }
 
 // For Mobile viewport
