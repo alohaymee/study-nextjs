@@ -1,0 +1,12 @@
+@import '@/styles/variables';
+
+.title {
+  margin-top: 20px;
+  padding: 8px 12px;
+  color: $white;
+}
+
+// For Mobile viewport
+@media screen and (max-width: 992px) {
+
+}

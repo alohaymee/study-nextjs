@@ -1,6 +1,7 @@
-@import '@/app/styles/variables';
+@import '@/styles/variables';
 
 .wrapper {
+  padding: 12px 20px;
   span {
     color: $variants02;
   }
@@ -10,6 +11,7 @@
   composes: wrapper;
   background-color: $variants03;
   border-left: 3px solid $warning;
+  font-weight: 600;
 }
 
 .closed {

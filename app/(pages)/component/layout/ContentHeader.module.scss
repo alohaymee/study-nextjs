@@ -1,0 +1,21 @@
+@import 'app/styles/variables';
+
+.iconBox {
+  background-color: $info;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: rgba(0,0,0,.5) 0px 2px 12px -3px;
+}
+
+.titleBox {
+  h4 {
+    margin: 4px 0 2px 0;
+  }
+}
+
+// For Mobile viewport
+@media screen and (max-width: 992px) {
+  .iconBox {
+
+  }
+}

@@ -1,6 +1,8 @@
 import styles from './layout.module.scss';
-import LogoBox from '@/app/(pages)/LogoBox';
-import NavBox from '@/app/(pages)/NavBox';
+import LogoBox from '@/(pages)/component/layout/LogoBox';
+import React from 'react';
+import ProfileBox from '@/(pages)/component/layout/ProfileBox';
+import NavBox from '@/(pages)/component/layout/NavBox';
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -10,7 +12,9 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           <div className={styles.logoBox}>
             <LogoBox></LogoBox>
           </div>
-          <div className={styles.profileBox}></div>
+          <div className={styles.profileBox}>
+            <ProfileBox></ProfileBox>
+          </div>
         </div>
         <div className={styles.mainBox}>
           <div className={styles.navBox}>

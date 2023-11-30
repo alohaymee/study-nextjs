@@ -13,7 +13,7 @@ import {
   ShoppingCart,
   SmileyAngry,
   User,
-} from '@phosphor-icons/react/dist/ssr';
+} from '@phosphor-icons/react/dist/ssr/index';
 import Image from 'next/image';
 import { Metadata } from 'next';
 

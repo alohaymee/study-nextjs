@@ -1,11 +1,11 @@
-@import "@/app/styles/variables";
+@import "styles/variables";
 
 .wrapper {}
-
 .headerBox {
   display: flex;
   width: 100%;
   height: 73px;
+  box-shadow: 0 2px 4px 0 rgba(43,43,43,.1);
 
   .logoBox {
     flex: 0 0 250px;
@@ -15,6 +15,8 @@
 
   .profileBox {
     width: 100%;
+    margin: auto;
+    padding: 0 15px;
     //background-color: $variants01;
   }
 }
@@ -22,9 +24,8 @@
 .mainBox {
   display: flex;
   .navBox {
+    background-color: $variants05;
     flex: 0 0 250px;
-    height: calc(100vh - 73px);
-    //background-color: $variants02;
     transition: all 250ms ease-out 0s;
   }
   .contentBox {
@@ -36,7 +37,7 @@
 @media screen and (max-width: 992px) {
   .headerBox {
     .profileBox {
-      width: 0;
+      display: none;
     }
     .logoBox {
       flex: 1;

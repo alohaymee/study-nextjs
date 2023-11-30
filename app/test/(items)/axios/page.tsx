@@ -4,8 +4,8 @@ import Link from 'next/link';
 async function getCarList() {
   let carList = await axios
     .post('https://nm-api.io/api/internal/v1/car/list', {
-      sdate: '2023-11-01T10:00',
-      edate: '2023-11-03T10:00',
+      sdate: '2023-12-01T10:00',
+      edate: '2023-12-03T10:00',
       zone: 'JEJU',
       agencyCode: ['NM_JEJUEV'],
     })
@@ -28,11 +28,7 @@ export default async function Page() {
         {carList.map((item: any) => (
           <li key={item.modelCode} id={item.modelCode}>
             {item.agency.agencyCode}: {item.modelCode} / {item.erpName}
-            <Link
-              href={`/study/axios/${item.agency.agencyCode}/${item.erpCode}`}
-            >
-              .. 상세보기
-            </Link>
+            <Link href={`/test/axios/${item.agency.agencyCode}/${item.erpCode}`}>.. 상세보기</Link>
           </li>
         ))}
       </ul>

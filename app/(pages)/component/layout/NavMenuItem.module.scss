@@ -1,7 +1,7 @@
-@import '@/app/styles/variables';
+@import '@/styles/variables';
 
 .common {
-  background-color: $variants04;
+  background-color: $variants05;
   border-left: 3px solid $warning;
   padding: 12px 24px;
 }
@@ -9,6 +9,7 @@
 .opened {
   composes: common;
   color: $warning;
+  font-weight: 600;
 }
 
 .closed {

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import Navbar from '@/app/test/components/Nav';
+import Navbar from '@/test/components/Nav';
 
 export const metadata: Metadata = {
   title: 'Study Next.js',

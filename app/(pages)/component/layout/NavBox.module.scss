@@ -1,0 +1,10 @@
+@import '@/styles/variables';
+
+.wrapper {
+  //background-color: $variants05;
+  height: calc(100vh - 73px);
+}
+// For Mobile viewport
+@media screen and (max-width: 992px) {
+
+}
